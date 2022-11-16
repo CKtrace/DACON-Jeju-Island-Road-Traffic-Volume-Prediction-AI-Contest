@@ -18,10 +18,10 @@ y = df1['target']
 
 train_x, val_x, train_y, val_y = train_test_split(X, y, test_size=0.1, random_state=2)
 
-ms = MinMaxScaler()
-train_x = ms.fit_transform(train_x)
-val_x = ms.transform(val_x)
-df2 = ms.transform(df2)
+# ms = RobustScaler()
+# train_x = ms.fit_transform(train_x)
+# val_x = ms.transform(val_x)
+# df2 = ms.transform(df2)
 
 dtrain = LGBRegressor.Dataset(train_x, label=train_y)
 dval = LGBRegressor.Dataset(val_x, label=val_y)
@@ -31,10 +31,10 @@ params = {
     "metric": "mae",
     "verbosity": -1,
     "boosting_type": "dart",
-    "skip_drop" : 0.9,
+    "skip_drop" : 0.8,
     "feature_pre_filter": True,
-    "num_iterations": 20000,
-    "learning_rate" : 0.4,
+    "num_iterations": 10000,
+    "learning_rate" : 0.3,
     "device" : 'gpu',
     "gpu_platform_id" : 0,
     "gpu_device_id" : 0,
@@ -54,4 +54,4 @@ prediction = model.predict(df2)
 submission=pd.read_csv('sample_submission.csv', index_col=0)  
 submission['target']=prediction
 
-submission.to_csv('11_14_05.csv')
+submission.to_csv('11_14_03.csv')
