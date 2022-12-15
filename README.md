@@ -15,7 +15,22 @@ __This repository is a place to share "제주도 도로 교통량 예측 AI 경�
 주최 : 제주 테크노파크, 제주특별자치도
 주관 : 데이콘
 ```
-</br>
+<br>
+
+## Repository Structure
+```
+│  README.md
+│  
+├─Data_Preprocessing
+│       Step1_Preprocessing.ipynb
+│       Step2_Preprocessing.ipynb
+│   
+└─Models
+        lgbm.py
+        lgbm_optuna.py
+```
+
+<br>
 
 
 ## Development Environment
