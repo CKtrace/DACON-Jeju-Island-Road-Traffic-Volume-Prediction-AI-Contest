@@ -8,7 +8,8 @@ Final Ranking : 105/712 (Top 14.7%)
 ## Introduction
 </br>
 
-__This repository is a place to share "[제주도 도로 교통량 예측 AI 경진대회]("https://dacon.io/competitions/official/236013/overview/description")" solution code.__
+__This repository is a place to share "[제주도 도로 교통량 예측 AI 경진대회](https://dacon.io/competitions/official/236013/overview/description)" solution code.__
+
 </br>
 
 ```
